@@ -4,8 +4,9 @@ Gives ability to switch 2.4Ghz AP and 5Ghz WDS+AP setting to 5Ghz AP and 2.4Ghz 
 with LED indicator confirmation. This need to get WDS only on one wireless interface at a time, in short - you could
 switch your WDS bridge from one frequency to another and back by one push (ofcourse, if other side of bridge configured right).
 
-First pushing always enable 5Ghz AP and 2.4Ghz WDS+AP mode. This mode submitted by two blinks. 
-Next mode is 2.4Ghz AP and 5Ghz WDS+AP, it submitted by 5 blinks.
+Script check router settings and change mode on opposite. If there is a mess in settings, it enable 5Ghz AP and 2.4Ghz WDS+AP mode by default. This mode submitted by two blinks.Next mode is 2.4Ghz AP and 5Ghz WDS+AP, it submitted by 5 blinks.
+
+PLEASE NOTE:After each mode set, router reboots for clean connection with new settings.
 
 For work as service code could be placed to script body in section "script to run after fully boot".
 
@@ -44,5 +45,6 @@ RU
 
 Скрипт для быстрого переключения режима 2.4Ггц AP + 5Ггц WDS+AP в режим 5Ггц AP + 2.4Ггц WDS+AP коротким нажатием на кнопку reset. 
 В качестве подтверждения переключения выбранную частоту с WDS "отбивает" светодиод на передней панели.
-Первое нажатие всегда включает 2.4Ггц WDS+AP. Далее по очереди.
+При нажатии проверяет, что в настройках и меняет режим в зависимости от текущего - на противоположный. Если в настройках ничего нет (что-то поправили сами или чистая прошивка) включает режим 2.4Ггц WDS+AP по-умолчанию. Далее по очереди.
+ВНИМАНИЕ: После каждой смены режима происходит перезагрузка для "чистого" соединения с новыми настройками.
 Нужно для быстрого "хопа" с 2.4Ггц WDS на 5Ггц WDS.
